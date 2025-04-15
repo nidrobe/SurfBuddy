@@ -10,7 +10,7 @@ Still in progress
 
 Quick run through of how to setup the project for local development
 
-## Frontend Setup
+## Frontend
 
 1. Create a virtual environment for the frontend by using "venv" or "conda"
 
@@ -38,6 +38,6 @@ npm install
 npm run dev
 ```
 
-## Backend Setup
+## Backend
 
 Still in progress
