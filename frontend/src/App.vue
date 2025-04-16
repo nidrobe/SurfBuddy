@@ -1,32 +1,48 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import Introduction from './components/Introduction.vue';
+import BeginnerIntermedidateAdvancedText from './components/BeginnerIntermediateAdvancedText.vue';
+import ChatBotField from './components/ChatBotField.vue';
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div class="app-container">
+    <header>
+      <h1>Surf Buddy</h1>
+        <Introduction />
+    </header>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+    <main>
+      <section class="chatbot-section">
+         <ChatBotField />
+      </section>
 
-  <main>
-    <TheWelcome />
-  </main>
+      <section class="skill-level-section">
+         <BeginnerIntermedidateAdvancedText />
+      </section>
+
+    </main>
+  </div>
 </template>
 
 <style scoped>
-header {
+/* Apply general header styles */
+.header {
   line-height: 1.5;
+  display: flex; /* align items */
+  align-items: center;
+  justify-content: space-between; /* Distribute space evenly */
+  padding: 1rem; /* Add some padding for spacing */
+  background-color: #f0f0f0; /* Light background color */
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+h1 {
+  font-size: 2rem; /* Increase font size */
+  color: #333; /* Darken text color */
+  margin: 0; /* Reset default margin */
 }
 
+/* For larger screens */
 @media (min-width: 1024px) {
   header {
     display: flex;
@@ -34,14 +50,5 @@ header {
     padding-right: calc(var(--section-gap) / 2);
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
 }
 </style>
