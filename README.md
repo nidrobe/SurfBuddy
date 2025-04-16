@@ -24,7 +24,7 @@ The LLM, which encapsulates the recommendation logic and algorithms, receives th
 
 Once the LLM processes the request and generates recommendations using AI algorithms, it sends the recommended items back to Django, encapsulated in a response structure.
 
-### Data Retrieval - Django to MongoDB:
+### Data Retrieval - Django to Database:
 
 Django, upon receiving the recommendation results from the LLM, fetches additional data from the database, such as product details or content information related to the recommendations.
 
