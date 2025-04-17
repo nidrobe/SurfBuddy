@@ -38,21 +38,28 @@ Quick run through of how to setup the project for local development
 
 ## Frontend
 
-1. Create a virtual environment for the frontend by using "venv" or "conda"
+1. Ensure Node.js and npm are installed
+
+- Check Node.js version: `node -v`
+- Check npm version: `npm -v`
+- If not installed, download and install Node.js from https://nodejs.org/
+
+
+3. Create a virtual environment for the frontend by using "venv" or "conda"
 
 ```
 conda create -n surfbuddy-frontend
 conda activate surfbuddy-frontend
 ```
 
-2. Navigate to the frontend directory and install dependecies
+3. Navigate to the frontend directory and install dependecies
 
 ```
 cd frontend
 npm install
 ```
 
-3. Run the Development Server
+4. Run the Development Server
 
 ```
 npm run dev
