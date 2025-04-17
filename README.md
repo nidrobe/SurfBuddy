@@ -45,20 +45,14 @@ conda create -n surfbuddy-frontend
 conda activate surfbuddy-frontend
 ```
 
-2. Navigate to the frontend directory and create a Vue.js project
+2. Navigate to the frontend directory and install dependecies
 
 ```
 cd frontend
-npm create vue@latest
-```
-
-3. Install Dependecies
-
-```
 npm install
 ```
 
-4. Run the Development Server
+3. Run the Development Server
 
 ```
 npm run dev
