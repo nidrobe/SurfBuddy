@@ -1,54 +1,78 @@
 <script setup>
-import Introduction from './components/Introduction.vue';
-import BeginnerIntermedidateAdvancedText from './components/BeginnerIntermediateAdvancedText.vue';
+import Header from './components/Header.vue';
 import ChatBotField from './components/ChatBotField.vue';
-
+import ShowResults from './components/ShowResults.vue';
+import Footer from './components/Footer.vue'; 
+import SkillLevel from './components/SkillLevel.vue';
 </script>
 
 <template>
-  <div class="app-container">
-    <header>
-      <h1>Surf Buddy</h1>
-        <Introduction />
-    </header>
+  <div class="container">
 
-    <main>
-      <section class="chatbot-section">
-         <ChatBotField />
-      </section>
+    <div id="one"><Header/></div>
+    <div id="two"><ChatBotField/></div>
+    <div id="three"><SkillLevel/></div>
+    <div id="four"><ShowResults/></div>
+    <div id="five"><Footer/></div>
 
-      <section class="skill-level-section">
-         <BeginnerIntermedidateAdvancedText />
-      </section>
-
-    </main>
   </div>
+
 </template>
 
 <style scoped>
-/* Apply general header styles */
-.header {
-  line-height: 1.5;
-  display: flex; /* align items */
-  align-items: center;
-  justify-content: space-between; /* Distribute space evenly */
-  padding: 1rem; /* Add some padding for spacing */
-  background-color: #f0f0f0; /* Light background color */
+
+.container { 
+  display: grid; 
+  grid-template-columns:  1fr 1.25fr;  
+  grid-template-rows: auto auto 1fr auto;
+  gap: 10px; 
+  grid-template-areas: 'header header' 
+                       'chatbotfield skilllevel' 
+                       'showresults skilllevel' 
+                       'footer footer'; 
+                       height: 100vh;
+  padding: 10px; /* Add padding around the entire grid */
+  box-sizing: border-box; /* Include padding in height */                  
 }
 
-h1 {
-  font-size: 2rem; /* Increase font size */
-  color: #333; /* Darken text color */
-  margin: 0; /* Reset default margin */
+.container > div { 
+  font-size: 20px; 
+  padding: 10px;
+}   
+#one { 
+  grid-area: header; 
+} 
+#two { 
+ grid-area: chatbotfield; 
+}
+#three { 
+  grid-area: skilllevel; 
+}     
+#four { 
+  grid-area: showresults; 
+} 
+#five { 
+  grid-area: footer; 
+}    
+
+body {
+  margin: 0;
+}
+
+input{
+  border: 0;
+  border-radius: 8px;
+  width: 100%;
+  height: 30px;
 }
 
 /* For larger screens */
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   header {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
   }
 
-}
+} */
 </style>
