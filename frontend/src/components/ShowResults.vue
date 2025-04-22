@@ -1,19 +1,18 @@
 <template>
-  <div class="chatbot-field">
-    <p>Chatbot Field</p>
+  <div class="showresults">
+    <p>Show Results</p>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'ChatBotField'
+    name: 'ShowResults'
   }
 </script>
   
 <style scoped>
   
-  .chatbot-field {
-    height: 240px;
+  .showresults {
     border: 1px solid rgb(0, 0, 0,0.2);
     padding: 8px;
     margin: 8px;
