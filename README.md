@@ -4,7 +4,7 @@ SurfBuddy is a full-stack web application which recommends surfboards based on s
 
 # Overview
 
-<img src="frontend/src/assets/Overview.png" width="600" height="300">
+<img src="frontend/src/assets/Overview.png" width="600" height="350">
 
 # General Idea of the Communication and Data Flow:
 
