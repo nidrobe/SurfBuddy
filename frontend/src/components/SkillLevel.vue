@@ -15,6 +15,23 @@
         <li><a href="#advanced">Advanced</a></li>
       </ul>
     </div>
+
+    <div class="skillevel-description">
+      <div class="beginner-description">
+        <h3 class="beginner-description-header">White water and your first waves</h3>
+        <br>
+        <div class="beginner-description-content">
+          <p>
+            As a beginner, you might have only surfed a little or not at all. 
+            Higher volume surfboards are just right for you. They make it easier for you to get up (takeoff), 
+            paddle and give you enough stability to progress quickly. Fun in the water is guaranteed. 
+          </p>
+        </div>
+      </div>
+      <div class="beginner-image">
+        <img src="../assets/beginner.jpeg" alt="beginner surfers at the beach" width="200" height="200">
+      </div>
+    </div>
   </div>
 
 </template>
@@ -28,7 +45,7 @@
 <style scoped>
 
   .skilllevel-text {
-    border: 1px solid rgb(0, 0, 0,0.2);
+    /* border: 1px solid rgb(0, 0, 0,0.2); */
     height: 100%;
     padding: 8px;
     margin: 8px;
@@ -55,13 +72,13 @@
     text-transform: uppercase;
     letter-spacing: .1rem;
     overflow: auto;
-    color: #32cdab;
+    color: #1c3a57;
     position: relative;
     top: -.83333rem;
   }
 
   .arrowdown {
-    border: solid #32cdab;
+    border: solid #1c3a57;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 9px;
@@ -98,9 +115,27 @@ li a {
 }
 
 li a:hover {
-  color: #32cdab;
+  color: #1c3a57;
   text-shadow: none;
   background: none;
 }
+
+.skillevel-description {
+    display: flex;            /* Make this a flex container */
+    align-items: center;      /* Vertically align items */
+    justify-content: center; /* Distribute items horizontal*/
+  }
+
+  .beginner-description {
+    flex: 1;                 /* Allow it to grow and take available space */
+    padding-right: 1px;     /* Add some space between text and image */
+    text-align: left;       /* left-justify contents */
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+
+  .beginner-image {
+    flex: 1;                 /* Allow it to grow and take available space */
+  }
   
 </style>
