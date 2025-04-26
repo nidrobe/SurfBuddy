@@ -53,6 +53,8 @@ npm install
 npm run dev
 ```
 
+The Vue.js development server should be now running at `http://localhost:5173/`.
+
 ## Backend
 
 1. Create a virtual environment for the backend by using "venv" or "conda"
@@ -69,8 +71,19 @@ cd backend
 pip install -r requirements.txt
 ```
 
-3. Start the Server
+3. Create a .env file within the backend directory and insert your personal keys
+
+4. Apply database migrations
+
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
+5. Start the Server
 
 ```
 python manage.py runserver
 ```
+
+The Django development server should be now running at `http://127.0.0.1:8000/` or `http://localhost:8000/`.
