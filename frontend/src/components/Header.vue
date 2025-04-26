@@ -3,7 +3,8 @@
     <p>Header Placeholder</p>
   </div> -->
   <header>
-    <p>Header</p>
+    <h1>Surf Buddy AI</h1>
+    <h3>An AI-powered surfboard recommender</h3>
   </header>
 </template>
 
@@ -16,12 +17,21 @@
 <style scoped>
 
 header {
+  padding: 10px;
   text-align: center;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(0, 0, 0,0.2);
-  height: 120px;
-  padding: 8px;
-  margin: 8px;
-  color: rgba(0,0,0,0.8);
 }
+
+h1 {
+  margin: 0;
+  font-size: 2em; 
+  color: #999;      
+}
+
+h3 {
+  font-size: 1.1em;       
+  font-weight: normal;    
+  color: #1c3a57;           
+  margin-top: 0.5em;       
+}
+
 </style>
