@@ -1,6 +1,6 @@
 # About
 
-SurfBuddy is a full-stack web application which recommends surfboards based on skill level, height, and weight. It utilizes a RESTful API and an external LLM to provide personalized suggestions. But Instead of relying on a web-based search, SurfBuddy leverages a dedicated database for surfboard information. As a Learning Project, this serves as a platform for exploring AI-based recommendation systems.
+SurfBuddy is a full-stack web application which recommends surfboards based on skill level, height, and weight. It utilizes a RESTful API and an external LLM to provide personalized suggestions. As a Learning Project, this serves as a platform for exploring AI-based recommendation systems.
 
 # Overview
 
