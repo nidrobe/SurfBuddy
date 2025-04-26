@@ -66,7 +66,7 @@ conda activate backend
 
 ```
 cd backend
-pip install - requirements.txt
+pip install -r requirements.txt
 ```
 
 3. Start the Server
