@@ -8,7 +8,7 @@ SurfBuddy is a full-stack web application which recommends surfboards based on s
 
 # General Idea of the Communication Flow:
 
-## Phase 1: LLM Only
+## Phase 1: LLM Only (Currently in Development)
 
 1. Frontend requests to Django.
 2. Django passes data to the LLM.
