@@ -1,6 +1,6 @@
 <template>
   <div class="chatbot-field">
-    <p>Chatbot Field</p>
+    <p>Chatfield</p>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="showresults">
-    <p>Show Results</p>
+    <p>Show Results (Surfboard Picture)</p>
   </div>
 </template>
 
