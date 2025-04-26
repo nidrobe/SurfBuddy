@@ -55,7 +55,7 @@ npm run dev
 
 ## Backend
 
-1. Create a virtual environment for the frontend by using "venv" or "conda"
+1. Create a virtual environment for the backend by using "venv" or "conda"
 
 ```
 conda create -n backend
