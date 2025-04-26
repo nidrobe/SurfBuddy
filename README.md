@@ -55,4 +55,22 @@ npm run dev
 
 ## Backend
 
-Still in progress
+1. Create a virtual environment for the frontend by using "venv" or "conda"
+
+```
+conda create -n backend
+conda activate backend
+```
+
+2. Navigate to the backend directory and install dependecies
+
+```
+cd backend
+pip install - requirements.txt
+```
+
+3. Start the Server
+
+```
+python manage.py runserver
+```
