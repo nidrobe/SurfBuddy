@@ -1,23 +1,36 @@
 <template>
   <footer>
-    <p>Footer</p>
+    <div class="footer-content">
+      <p>&copy; {{ currentYear }} Surf Buddy AI. All rights reserved.</p>
+    </div>
   </footer>
 </template>
 
 <script>
   export default {
-    name: 'Footer'
+    name: 'Footer',
+    data() {
+    return {
+      currentYear: new Date().getFullYear()
+    };
+  }
   }
 </script>
   
 <style scoped>
+
   
-footer {
-    text-align: center;
-    border: 1px solid rgb(0, 0, 0,0.2);
-    height: 60px;
-    padding: 8px;
-    margin: 8px;
-    color: rgba(0,0,0,0.8);
+  footer {
+  background-color: #1c3a57; 
+  padding: 20px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #555;
+}
+
+.footer-content {
+  max-width: 960px; /* Keep content within a reasonable width */
+  margin: 0 auto;   /* Center the content */
+  color: white;
 }
 </style>

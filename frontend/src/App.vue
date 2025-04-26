@@ -31,7 +31,7 @@ import SkillLevel from './components/SkillLevel.vue';
                        'showresults skilllevel' 
                        'footer footer'; 
                        height: 100vh;
-  padding: 10px; /* Add padding around the entire grid */
+  padding: 0px; 
   box-sizing: border-box; /* Include padding in height */                  
 }
 
@@ -53,6 +53,10 @@ import SkillLevel from './components/SkillLevel.vue';
 } 
 #five { 
   grid-area: footer; 
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-top: 10px;
 }    
 
 body {
