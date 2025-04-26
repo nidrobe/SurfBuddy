@@ -6,31 +6,20 @@ SurfBuddy is a full-stack web application which recommends surfboards based on s
 
 <img src="frontend/src/assets/Overview.png" width="600" height="350">
 
-# General Idea of the Communication and Data Flow:
+# General Idea of the Communication Flow:
 
-### User Request - Frontend:
+## Phase 1: LLM Only
 
-A user initiates a request on the frontend within the Chatfield, surfboard recommendation based on the provided information e.g. weight, height, skill.
+1. Frontend requests to Django.
+2. Django passes data to the LLM.
+3. LLM generates recommendations and sends them back to Django.
+4. Django formats the response and sends it to the frontend for display.
 
-### Request Handling - Django Backend:
+5. Validate if the LLM can provide reasonable recommendations in the first place before moving on to phase two.
 
-Django receives the user request and processes it, parsing the request data to extract relevant information to initiate the recommendation process.
+## Phase 2: Database Integration
 
-### Django to Large Language Model (LLM):
-
-Instead of relying on predefined rules, Django sends the parsed data to the LLM. The LLM uses its internal logic to generate surfboard recommendations based on the received data.
-
-### LLM to Django:
-
-Once the LLM processes the request and generates recommendations, it sends the recommended items back to Django.
-
-### Data Retrieval - Django to Database:
-
-Receiving the recommendation results from the LLM, Django then may retrieve additional information from the database to enrich the recommendations (e.g., product details, images, etc.).
-
-### Response Construction - Django to Frontend:
-
-Django assembles the recommendation results along with the retrieved data from the database into a structured response, which is then sent back to the frontend to display the personalized recommendations to the user.
+Enhance the LLM-driven recommendations with detailed information retrieved from a database, providing a richer and more informative user experience e.g. surfboard pictures, price tags etc.
 
 # Project Setup
 
