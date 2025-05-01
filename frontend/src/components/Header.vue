@@ -3,7 +3,7 @@
     <p>Header Placeholder</p>
   </div> -->
   <header>
-    <h1>Surf Buddy AI V1</h1>
+    <h1>Surf Buddy AI</h1>
     <h3>An AI-powered surfboard recommender</h3>
   </header>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div class="showresults">
-    <p>Show Results (Surfboard Picture)</p>
+    <!-- <p>Show Results (Surfboard Picture)</p> -->
   </div>
 </template>
 
@@ -12,10 +12,10 @@
   
 <style scoped>
   
-  .showresults {
+  /* .showresults {
     border: 1px solid rgb(0, 0, 0,0.2);
     padding: 8px;
     margin: 8px;
     color: rgba(0,0,0,0.8);
-  }
+  } */
 </style>
