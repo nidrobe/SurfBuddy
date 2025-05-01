@@ -7,6 +7,7 @@ from rest_framework.response import Response
 from rest_framework.filters import SearchFilter
 from .models import Surfboard
 from rest_framework import generics
+from rest_framework.decorators import api_view, permission_classes
 
 class CreateUserView(generics.CreateAPIView):
     queryset = User.objects.all()
@@ -26,3 +27,9 @@ class SurfboardDeleteView(generics.RetrieveDestroyAPIView):
     queryset = Surfboard.objects.all()
     serializer_class = SurfboardSerializer
     permission_classes = [IsAuthenticated]
+
+
+@api_view(['GET'])
+@permission_classes([AllowAny])  # Allow any user (authenticated or not)
+def test_endpoint(request):
+    return Response({"message": "Backend is connected!"})
