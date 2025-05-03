@@ -44,6 +44,9 @@ import SkillLevel from './components/SkillLevel.vue';
 } 
 #two { 
  grid-area: chatbotfield; 
+ display: flex;          /* Use flexbox */
+ justify-content: center; /* Center horizontally */
+ align-items: center;     /* Center vertically */
 }
 #three { 
   grid-area: skilllevel; 

@@ -45,7 +45,7 @@ export default {
 <style scoped>
 #chatbot-field {
   width: 400px; /* Adjust to your desired width */
-  height: 300px; /* Adjust to your desired height */
+  height: 350px; /* Adjust to your desired height */
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden; /* Hide scrollbars if content exceeds height */
