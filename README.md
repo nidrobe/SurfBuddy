@@ -71,9 +71,12 @@ cd backend
 pip install -r requirements.txt
 ```
 
-3. Create a .env file within the backend directory and insert your personal keys
+3. Create a .env file within the backend directory and insert your OpenAI API key. Make sure to have enough credit on your OpenAI Account.
+```
+OPENAI_API_KEY="your-api-key"
+```
 
-4. Apply database migrations
+5. Apply database migrations
 
 ```
 python manage.py makemigrations
