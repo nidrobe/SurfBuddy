@@ -1,5 +1,6 @@
 from django.db import models
-    
+
+# Define the Surfboard table structure in the database    
 class Surfboard(models.Model):
     TYPES = (
         ('shortboard', 'Shortboard'),

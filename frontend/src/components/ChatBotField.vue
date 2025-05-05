@@ -6,32 +6,41 @@
       </div>
     </div>
     <div class="input-area">
-      <input type="text" v-model="userInput" @keyup.enter="sendMessage" placeholder="Type your message...">
+      <input type="text" v-model="userInput" @keyup.enter="sendMessage" placeholder="Type in your message...">
       <button @click="sendMessage">Send</button>
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios'; 
 export default {
   name: 'ChatBotField',
   data() {
     return {
       messages: [],
-      userInput: ''
+      userInput: '',
+      apiUrl: 'http://127.0.0.1:8000/api/chat/' // Backend API endpoint
     };
   },
   methods: {
     async sendMessage() {
-      // (Your sendMessage logic here - same as before)
+      
       if (this.userInput.trim() !== '') {
         this.messages.push({ text: this.userInput, sender: 'user' }); // Add user message
 
         try {
-         // axios call
-          this.messages.push({ text: "Reply From Backend/LLM", sender: 'ai' }); // Add AI response
+         
+         const response = await axios.post(this.apiUrl, { message: this.userInput }, {
+         headers: {
+              'Content-Type': 'application/json' // Explicitly set the content type
+            }
+          }); 
+
+         this.messages.push({ text: response.data.message, sender: 'ai' }); // Add AI response
+
         } catch (error) {
-          console.error('Error sending message:', error);
+          console.error('Error sending message:', error); // Log the entire error object
           this.messages.push({ text: 'Error: Could not connect to the server.', sender: 'ai' });
         }
 

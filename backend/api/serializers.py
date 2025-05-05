@@ -3,6 +3,10 @@ from rest_framework import serializers
 from .models import Surfboard
 
 class UserSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the User model.
+    Handles serialization and deserialization of User objects.
+    """
     class Meta:
         model = User
         fields = ['id', 'username', 'password']
@@ -14,6 +18,10 @@ class UserSerializer(serializers.ModelSerializer):
         return user
     
 class SurfboardSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Surfboard model.
+    Handles serialization and deserialization of Surfboard objects.
+    """
     class Meta:
         model = Surfboard
         fields = '__all__'
