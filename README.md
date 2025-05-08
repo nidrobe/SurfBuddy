@@ -72,6 +72,7 @@ pip install -r requirements.txt
 ```
 
 3. Create a .env file within the backend directory and insert your OpenAI API key. Make sure to have enough credit on your OpenAI Account.
+
 ```
 OPENAI_API_KEY="your-api-key"
 ```
@@ -90,3 +91,11 @@ python manage.py runserver
 ```
 
 The Django development server should be now running at `http://127.0.0.1:8000/` or `http://localhost:8000/`.
+
+# OpenAI API
+
+The OpenAI API is fundamentally stateless. Each API request is treated as an independent event. The API doesn't automatically retain information from previous interactions or "remember" anything about past conversations (see screenshot below). Therefore to create a chat experience with a sense of memory using the OpenAI API, a memory system has to be engineered. This invloves storing the conversation in some external storage and retrieving the relevant parts of conversation history.
+
+## Memory System (Currently in Development)
+
+...
