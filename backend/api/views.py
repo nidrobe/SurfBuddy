@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from rest_framework import generics
-from .serializers import UserSerializer, SurfboardSerializer
+from .serializers import UserSerializer #,SurfboardSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 from rest_framework.filters import SearchFilter
-from .models import Surfboard
+# from .models import Surfboard
 from rest_framework import generics, status
 from rest_framework.decorators import api_view, permission_classes
 from django.shortcuts import render
@@ -20,19 +20,19 @@ class CreateUserView(generics.CreateAPIView):
     serializer_class = UserSerializer
     permission_classes = [AllowAny]  # TODO: Restrict this in production
 
-# TODO: Add error handling 
-class SurfboardCreateListView(generics.ListCreateAPIView):
-    queryset = Surfboard.objects.all()
-    serializer_class = SurfboardSerializer
-    permission_classes = [IsAuthenticated]
-    filter_backends = [SearchFilter]
-    search_fields = ['name', 'brand', 'type'] # Allows searching by name, brand, or type
+# # TODO: Add error handling 
+# class SurfboardCreateListView(generics.ListCreateAPIView):
+#     queryset = Surfboard.objects.all()
+#     serializer_class = SurfboardSerializer
+#     permission_classes = [IsAuthenticated]
+#     filter_backends = [SearchFilter]
+#     search_fields = ['name', 'brand', 'type'] # Allows searching by name, brand, or type
 
-# TODO: Add error handling
-class SurfboardDeleteView(generics.RetrieveDestroyAPIView):
-    queryset = Surfboard.objects.all()
-    serializer_class = SurfboardSerializer
-    permission_classes = [IsAuthenticated]
+# # TODO: Add error handling
+# class SurfboardDeleteView(generics.RetrieveDestroyAPIView):
+#     queryset = Surfboard.objects.all()
+#     serializer_class = SurfboardSerializer
+#     permission_classes = [IsAuthenticated]
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -60,7 +60,7 @@ def chat_view(request):
                     {"role": "system", "content": "You are a helping me finding the perfect surfboard."},
                     {"role": "user", "content": user_message},
                 ],
-                max_tokens=150
+                max_tokens=100
             )
             ai_message = response.choices[0].message.content
             logger.info(f"AI Response: {ai_message}")  # log ai message before returning

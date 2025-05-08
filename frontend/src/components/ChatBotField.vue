@@ -54,7 +54,7 @@ export default {
 <style scoped>
 #chatbot-field {
   width: 400px; /* Adjust to your desired width */
-  height: 350px; /* Adjust to your desired height */
+  height: 440px; /* Adjust to your desired height */
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden; /* Hide scrollbars if content exceeds height */
@@ -75,6 +75,8 @@ export default {
   border-radius: 15px;
   max-width: 70%; /* Adjust to prevent long messages from overflowing */
   word-wrap: break-word; /* Break long words to prevent overflow */
+  font-family:  "Open Sans",sans-serif;
+  font-size: 1.1rem;
 }
 
 .message.user {
