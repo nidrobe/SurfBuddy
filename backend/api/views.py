@@ -49,19 +49,20 @@ client = OpenAI(api_key=settings.OPENAI_API_KEY)
 def chat_view(request):
     if request.method == 'POST':
         try:
-            logger.info("Received a POST request")
-            user_message = request.POST.get('message', '')
-            logger.info(f"Received message: {user_message}")
+            # logger.info("Received a POST request")
+            user_message = request.data.get('message', '')
+            # logger.info(f"Received message: {user_message}")
 
             logger.info(f"Full request data: {request.data}")  # Check the whole request
             response = client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
-                    {"role": "system", "content": "You are a helping me finding the perfect surfboard."},
+                    {"role": "system", "content": "You are a helpful assistant."},
                     {"role": "user", "content": user_message},
                 ],
                 max_tokens=100
             )
+            # logger.info(f"Full OpenAI API response: {response}")
             ai_message = response.choices[0].message.content
             logger.info(f"AI Response: {ai_message}")  # log ai message before returning
             return Response({'message': ai_message}, status=status.HTTP_200_OK)  # Use DRF's Response
